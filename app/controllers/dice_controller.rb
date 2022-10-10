@@ -9,18 +9,44 @@ class DiceController < ApplicationController
   end
   
   def one_d_6
-    # @roll = rand(1..6)
-    @rolls = self.roll(num_of_dice: 1, num_of_sides: 6)
-    render({ :template => "dice_layouts/one_d_6.html.erb"})
+    @dice = 1
+    @sides = 6
+    @rolls = self.roll(num_of_dice: @dice, num_of_sides: @sides)
+    render({ :template => "dice_layouts/dice.html.erb"})
   end
 
   def two_d_6
-    @rolls = self.roll(num_of_dice: 2, num_of_sides: 6)
-    render({ :template => "dice_layouts/two_d_6.html.erb"})
+    @dice = 2
+    @sides = 6
+    @rolls = self.roll(num_of_dice: @dice, num_of_sides: @sides)
+    render({ :template => "dice_layouts/dice.html.erb"})
   end
 
   def three_d_6
-    @rolls = self.roll(num_of_dice: 3, num_of_sides: 6)
-    render({ :template => "dice_layouts/three_d_6.html.erb"})
+    @dice = 3
+    @sides = 6
+    @rolls = self.roll(num_of_dice: @dice, num_of_sides: @sides)
+    render({ :template => "dice_layouts/dice.html.erb"})
+  end
+
+  def four_d_6
+    @dice = 4
+    @sides = 6
+    @rolls = self.roll(num_of_dice: @dice, num_of_sides: @sides)
+    render({ :template => "dice_layouts/dice.html.erb"})
+  end
+
+  def five_d_6
+    @dice = 5
+    @sides = 6
+    @rolls = self.roll(num_of_dice: @dice, num_of_sides: @sides)
+    render({ :template => "dice_layouts/dice.html.erb"})
+  end
+
+  def six_d_6
+    @dice = 6
+    @sides = 6
+    @rolls = self.roll(num_of_dice: @dice, num_of_sides: @sides)
+    render({ :template => "dice_layouts/dice.html.erb"})
   end
 end
